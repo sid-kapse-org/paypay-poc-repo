@@ -4,7 +4,7 @@ module "vpc" {
   version = "5.1.1"
 
   name = "sidd-eks-fargate-vpc"
-  cidr = "10.0.0.0/22"
+  cidr = "10.0.0.0/21"
 
   azs             = ["${var.region}a", "${var.region}b"]
   private_subnets = ["10.0.0.0/24", "10.0.1.0/24"]
