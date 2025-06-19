@@ -15,3 +15,14 @@ module "vpc" {
     Environment = "var.environment"
   }
 }
+
+#create subnet resource
+resource "aws_subnet" "subnet" {
+  vpc_id     = module.vpc.vpc_id
+  cidr_block = "10.0.5.0/24"
+
+
+  tags = {
+    Name = "sidd-eks-fargate-subnet"
+  }
+}
