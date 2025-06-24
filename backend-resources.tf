@@ -34,7 +34,7 @@ resource "aws_dynamodb_table" "paypay_tf_lock" {
     }
 
     tags = {
-        Name = "paypay Terraform lock table"
+        Name = "Terraform lock table"
         Environment = "var.environment"
     }
 }
